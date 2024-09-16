@@ -1,16 +1,22 @@
 {
   "name": "leafy-bot",
+  "type": "module",
   "scripts": {
     "dev": "wrangler dev",
+    "fix": "biome check --write . && tsc --noEmit",
     "deploy": "wrangler deploy --minify",
-    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "register": "tsc -p tsconfig.json && node --env-file=.env dist/register.js"
   },
   "dependencies": {
+    "discord-hono": "^0.8.5",
     "hono": "^4.6.1"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.1",
     "@cloudflare/workers-types": "^4.20240909.0",
-    "wrangler": "^3.57.2"
+    "@types/node": "^22.5.5",
+    "discord-api-types": "^0.37.100",
+    "wrangler": "^3.78.2"
   }
 }
