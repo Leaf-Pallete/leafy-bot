@@ -9,6 +9,7 @@
     "register": "tsc -p tsconfig.json && node --env-file=.env dist/register.js"
   },
   "dependencies": {
+    "@octokit/webhooks": "^13.3.0",
     "discord-hono": "^0.8.5",
     "hono": "^4.6.1"
   },

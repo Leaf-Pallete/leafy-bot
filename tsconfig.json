@@ -13,7 +13,16 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "types": ["node"],
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"],
+      "@/utils/*": ["utils/*"],
+      "@/types/*": ["types/*"],
+      "@/constants/*": ["constants/*"],
+      "@/integrations/*": ["integrations/*"],
+      "@/commands/*": ["commands/*"]
+    }
   },
   "include": [
     "src/**/*.ts",
