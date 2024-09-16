@@ -3,6 +3,10 @@ import { Command, Option, register } from 'discord-hono';
 const commands = [
   new Command('ola', 'Responde com uma saudação'),
   new Command('help', 'response help').options(new Option('text', 'with text')),
+  new Command(
+    'apresentar',
+    'Faz a Leafy se apresentar (apenas para administradores)',
+  ),
 ];
 
 register(
