@@ -1,7 +1,7 @@
 import { Button, Components, DiscordHono } from 'discord-hono';
 
 const app = new DiscordHono()
-  .command('hello', (c) => c.res('world!'))
+  .command('ola', (c) => c.res('Olá! Como posso ajudar?'))
   .command('help', (c) =>
     c.res({
       content: `text: ${c.var.text}`,
